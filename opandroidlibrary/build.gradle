@@ -24,6 +24,32 @@ android {
 
 }
 
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'Android-Lib'   // Has to be same as your library module name
+
+    publishedGroupId = 'lib.soft.com.opandroidlibrary'
+    libraryName = 'AndroidLib'
+    artifact = 'androidLib'     // Has to be same as your library module name
+
+    libraryDescription = 'Android Library to make any text into Toast with Awesome prepended to the text'
+
+    // Your github repo link
+    siteUrl = 'https://github.com/yasseribrahim/android-lib'
+    gitUrl = 'https://github.com/yasseribrahim/android-lib.git'
+    githubRepository= 'nisrulz/UploadToBintray'
+
+    libraryVersion = '1.0'
+
+    developerId = 'androidLib'
+    developerName = 'Android Lib'
+    developerEmail = 'yasser.ibrahim@principal.software'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
@@ -32,3 +58,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
+
+apply from: 'https://raw.githubusercontent.com/nisrulz/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nisrulz/JCenter/master/bintrayv1.gradle'
